@@ -5,6 +5,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 scheduler_= BackgroundScheduler()
 scheduler_.start()
 jobId = "myjob"
+jobTime = 2
 
 def job_function():
     print("---job---")
@@ -14,7 +15,7 @@ def startBtnClick(evt):
         print("---任务已经开始了，不要重复执行---")
     else:
         print("开始任务")
-        scheduler_.add_job(job_function, 'interval', seconds=5, id=jobId)
+        scheduler_.add_job(job_function, 'interval', seconds=jobTime, id=jobId)
 
 def endBtnClick(evt):
     if(scheduler_.get_job(jobId)):

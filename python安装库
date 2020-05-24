@@ -1,0 +1,10 @@
+pip3 install APScheduler
+wxpython
+Django
+anaconda
+openpyxl
+pymysql
+requests
+wx
+apscheduler
+matplotlib
